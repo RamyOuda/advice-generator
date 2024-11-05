@@ -28,7 +28,6 @@ export const AppStore = signalStore(
         }),
         switchMap(() => {
           return service.fetchAdvice().pipe(
-            delay(3000),
             tapResponse({
               next: ({ id, advice }) => {
                 patchState(store, { id, advice, loading: false });
