@@ -1,1 +1,10 @@
-<h1>app works!</h1>
+<div>
+  @if (loading()) {
+  <p class="loading">Loading...</p>
+  } @else if (!advice()) {
+  <p class="error">Error!</p>
+  } @else {
+  <p class="id">ADVICE #{{ id() }}</p>
+  <p class="advice">"{{ advice() }}"</p>
+  }
+</div>

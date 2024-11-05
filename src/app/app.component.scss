@@ -1,0 +1,50 @@
+@import "../styles/variables";
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  height: 100%;
+  width: 100%;
+
+  background-color: $dark-blue;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 400px;
+    width: 800px;
+    padding: 48px;
+    box-shadow: 32px 32px 32px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+
+    background-color: $dark-grayish-blue;
+
+    .loading {
+      color: $neon-green;
+      font-size: 4rem;
+    }
+
+    .id,
+    .advice {
+      text-align: center;
+    }
+
+    .id {
+      color: $neon-green;
+      letter-spacing: 4px;
+      margin-bottom: 32px;
+    }
+
+    .advice {
+      color: $light-cyan;
+      font-size: 2rem;
+      flex: 1;
+    }
+  }
+}
