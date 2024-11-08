@@ -2,7 +2,7 @@ import { inject } from '@angular/core';
 import { tapResponse } from '@ngrx/operators';
 import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
-import { delay, EMPTY, pipe, switchMap, tap } from 'rxjs';
+import { EMPTY, pipe, switchMap, tap } from 'rxjs';
 import { AppService } from './app.service';
 
 interface AppState {
