@@ -1,4 +1,4 @@
-<div>
+<div class="advice-container">
   @if (loading()) {
   <p class="loading">Loading...</p>
   } @else if (!advice()) {
@@ -6,5 +6,10 @@
   } @else {
   <p class="id">ADVICE #{{ id() }}</p>
   <p class="advice">"{{ advice() }}"</p>
-  }
+
+  @if (!timer()) {
+  <button class="fetch-advice" (click)="fetchAdvice()">Get New Advice</button>
+  } @else {
+  <button class="fetch-advice">{{ timer() }}</button>
+  } }
 </div>
